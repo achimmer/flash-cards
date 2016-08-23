@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Flashcards</title>
+  <link rel="stylesheet" href="/css/vendor.css">
+</head>
+
+<body>
+
+  <nav class="green darken-1">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand-logo">Flash Cards</a>
+      <!-- <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+      </ul> -->
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-title">
+              Create Card
+            </div>
+            <input id="card-title" type="text" value="prototype object">
+            <textarea id="card-desc" class="materialize-textarea"> the prototype of the current object. </textarea>
+          </div>
+          <div class="card-action">
+            <button id="card-create" class="waves-effect waves-light blue btn">Save</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col s12">
+        <table id="card-list">
+          <thead>
+            <tr>
+              <th> Term </th>
+              <th> Description </th>
+              <th> Actions </th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="edit-card-modal" class="modal">
+    <div class="modal-content">
+      <input id="edit-card-title" type="text" value="">
+      <textarea id="edit-card-desc" class="materialize-textarea"></textarea>
+    </div>
+    <div class="modal-footer">
+      <a id="card-update" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Save</a>
+    </div>
+  </div>
+
+
+  <script src="/js/vendor.js" charset="utf-8"></script>
+  <script src="/js/app.js" charset="utf-8"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyDL8mnOlEwVIaFfQGO0CtGnUslkrHA4-QM",
+      authDomain: "flash-cards-287c0.firebaseapp.com",
+      databaseURL: "https://flash-cards-287c0.firebaseio.com",
+      storageBucket: "flash-cards-287c0.appspot.com",
+    };
+    firebase.initializeApp(config);
+  </script>
+</body>
+
+</html>
